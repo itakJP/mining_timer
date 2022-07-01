@@ -21,8 +21,6 @@ rigids = ini['SETTINGS']['RIG_IDS']
 
 host = "https://api2.nicehash.com"
 
-
-
 ##################################################################
 
 def request(method, path, query, body):
@@ -113,7 +111,7 @@ def main(args):
             except Exception as ex:
                 print("Unexpected error:", ex)
                 exit(1)
-    else:
+    else:      
         exit(2)
 
     print(response)
@@ -121,4 +119,3 @@ def main(args):
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
-    
