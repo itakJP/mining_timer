@@ -98,7 +98,7 @@ def main(args):
                 response = request(method, path, "", body)
             except Exception as ex:
                 print("Unexpected error:", ex)
-                exit(1)
+                sys.exit(1)
 
     elif args[1] == "STOP":
         for rig in rigs:
@@ -110,12 +110,12 @@ def main(args):
                 response = request(method, path, "", body)
             except Exception as ex:
                 print("Unexpected error:", ex)
-                exit(1)
+                sys.exit(1)
     else:      
-        exit(2)
+        sys.exit(2)
 
     print(response)
-    exit(0)
+    sys.exit(0)
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
